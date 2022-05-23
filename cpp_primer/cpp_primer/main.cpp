@@ -6,6 +6,9 @@
 //
 
 #include <iostream>
+//#include <cctype>
+
+#include <vector>
 
 using namespace std;
 
@@ -140,5 +143,110 @@ int main(int argc, const char * argv[]) {
 //    p1 = p3; // 错误
 //    p2 = p3; // 正确，顶层const忽略，底层const相同
     
+//    string a("a");
+//    string b{"b"};
+//    string c(10,'c');
+//
+//    cout << "a:" << a << endl;
+//    cout << "b:" << b << endl;
+//    cout << "c:" << c << endl;
+//    string s1;
+//    string s2;
+//    while (getline(cin, s)) {
+//        cout << "s:" << s <<endl;
+//    }
+//    while (cin >> s1 >> s2) {
+//        if (s1.size() == s2.size()) {
+//            cout << "s1和s2等长" << endl;
+//        } else {
+//            cout << "s1和s不等长" << endl;
+//            string tmp = s1.size() > s2.size() ? s1 : s2;
+//            cout << "两者中较长的是：" << tmp << endl;
+//        }
+//
+//    }
+//    string r_str;
+//    string s;
+//    while (cin >> s) {
+//        r_str += s;
+//        r_str += " ";
+//    }
+//    cout << "最后的字符串是：" << r_str << endl;
+    
+//    string s = "string";
+//    for (char &c : s) {
+//        c = 'X';
+//    }
+//    cout << "s:" << s << endl;
+    
+//    vector<vector<int>> ivec; // 正确的
+//    vector<string> svec = ivec; // 不正确，类型不同
+//    vector<string> svec(10, "null"); // 正确的
+    
+//    vector<int> v1; // 0个元素
+//    vector<int> v2(10); // 10个0
+//    vector<int> v3(10,42); // 10个42
+//    vector<int> v4{10}; // 1个10
+//    vector<int> v5{10,42}; // 2个 10、42
+//    vector<string> v6{10}; // 10 个 “”
+//    vector<string> v7{10, "hi"}; // 10 个 “hi”
+    
+//    for (auto item : v6) {
+//        cout << item << endl;
+//    }
+    
+//    string s = "a";
+//    auto it = v3.cend();
+//    cout << *it << endl;
+    
+    
+//    vector<string> v;
+//    string s;
+//    while (cin >> s) {
+//        v.push_back(s);
+//    }
+//
+//    for (auto &item : v) {
+//        for (auto &c : item) {
+//            c = toupper(c);
+//        }
+//    }
+//    for (auto item : v) {
+//        cout << item << endl;
+//    }
+    
+    
+//    vector<int> v1(10, 42);
+//    vector<int> v2{42,42,42,42,42,42,42,42,42,42};
+//    vector<int> v3(v1);
+    
+    
+    vector<int> nums;
+    int num;
+    while (cin >> num) {
+        nums.push_back(num);
+    }
+  
+//    int i = 0;
+//    while (i < nums.size()) {
+//        int sum = nums[i];
+//        if (i+1<nums.size()) {
+//            sum += nums[i+1];
+//        }
+//        i += 2;
+//        cout << sum << endl;
+//    }
+    
+    vector<int>::size_type i = 0, j = nums.size()-1;
+    while (i <= j) {
+        int sum = nums[i];
+        if (i < j) {
+            sum = nums[i] + nums[j];
+        }
+        ++i;
+        --j;
+        cout << sum << endl;
+     }
+
     return 0;
 }
