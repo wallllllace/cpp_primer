@@ -128,5 +128,17 @@ int main(int argc, const char * argv[]) {
 //    const int &const r2; // 不合法，引用不是类型
 //    int  i = 10;
 //    const int i2 = i, &r = i; //合法，常量引用可以应用非常量
+    
+//    const int v2 = 0; int v1 = v2; // 顶层const，拷贝不受影响
+//    int *p1 = &v1, &r1 = v1; // 不是const
+//    int i = 0;
+//    const int *p2 = &v2, * const p3 = &i, &r2 = v2; // 第二个顶层const忽略，底层const可以转化
+//
+//    r1 = v2; // 错误
+//    p1 = p2; // 错误，底层const赋值给非const
+//    p2 = p1; // 正确，底层const可以转化
+//    p1 = p3; // 错误
+//    p2 = p3; // 正确，顶层const忽略，底层const相同
+    
     return 0;
 }
