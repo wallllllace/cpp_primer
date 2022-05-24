@@ -221,11 +221,11 @@ int main(int argc, const char * argv[]) {
 //    vector<int> v3(v1);
     
     
-    vector<int> nums;
-    int num;
-    while (cin >> num) {
-        nums.push_back(num);
-    }
+//    vector<int> nums;
+//    int num;
+//    while (cin >> num) {
+//        nums.push_back(num);
+//    }
   
 //    int i = 0;
 //    while (i < nums.size()) {
@@ -237,16 +237,127 @@ int main(int argc, const char * argv[]) {
 //        cout << sum << endl;
 //    }
     
-    vector<int>::size_type i = 0, j = nums.size()-1;
-    while (i <= j) {
-        int sum = nums[i];
-        if (i < j) {
-            sum = nums[i] + nums[j];
-        }
-        ++i;
-        --j;
-        cout << sum << endl;
-     }
+//    vector<int>::size_type i = 0, j = nums.size()-1;
+//    while (i <= j) {
+//        int sum = nums[i];
+//        if (i < j) {
+//            sum = nums[i] + nums[j];
+//        }
+//        ++i;
+//        --j;
+//        cout << sum << endl;
+//     }
+    
+    
+//    vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//    auto it = v.begin();
+//    while (it != v.end()) {
+//        *it = (*it) * 2;
+//        ++it;
+//    }
+//    for (auto i : v) {
+//        cout << i << endl;
+//    }
 
+    
+    // 字符数组
+//    char a[] = "hello"; // 6个元素最后有一个空字符
+//    数组，不允许拷贝和赋值
+    
+//    unsigned buf_size = 1024;
+//    int ia[buf_size]; // 非法，buf_size 不是常量表达式
+//    int ia[4*7-14]; //合法
+//    int ia[txt_size()] // 不合法，txt_size()不是常量表达式
+//    char st[11] = "fundamental"; // 非法，11位不够，最后还有一个空字符
+    
+//    int a[10];
+//    for (int i = 0; i < 10; ++i) {
+//        a[i] = i;
+//    }
+//    for (int i : a) {
+//        cout << i << endl;
+//    }
+//
+//
+//    int b[10];
+//    for (int i = 0; i < 10; ++i) {
+//        b[i] = a[i];
+//    }
+//    for (int i : a) {
+//        cout << i << endl;
+//    }
+//    for (int i : b) {
+//        cout << i << endl;
+//    }
+    
+//    vector<int> v(10);
+//    for (int i = 0; i < 10; ++i) {
+//        v[i] = i;
+//    }
+//
+//    for (auto i : v) {
+//        cout << i << endl;
+//    }
+//
+//
+//    vector<int> v2 = v;
+//    for (auto i : v2) {
+//        cout << i << endl;
+//    }
+//
+//    // 数组的名字是指向数组首元素的指针
+//    string nums[] = {"one", "two", "three"};
+//
+//    string *p2 = nums; // 等价于 string *p2 = &nums[0];
+//    // 使用auto 推断成指针，使用decltype 转换为数组
+//
+//    // 只要指针指向数组中的元素，就可以使用下标
+//    int ia[] = {0, 2, 4, 6, 8};
+//    int *p = &ia[2]; // p 指向第3个元素
+//    int j = p[1]; // j是第二个元素
+//    int k = p[-2]; // k是第一个元素
+    
+    // 使用范围for语句处理多维数组，除了最内层的循环外都要使用引用类型
+    
+    int ia[3][4] = {
+        {1, 2, 3, 4},
+        {11, 12, 13, 14},
+        {21, 22, 23, 24}
+    };
+    // 范围for循环
+//    for (int (&i)[4] : ia) {
+//        for (int j : i) {
+//            cout << j << endl;
+//        }
+//    }
+    
+    // 普通for循环，下标运算符
+//    for (int i = 0; i < 3; ++i) {
+//        for (int j = 0; j < 4; ++j) {
+//            cout << ia[i][j] << endl;
+//        }
+//    }
+    
+    // 普通for循环，指针
+//    for (int (*i)[4] = begin(ia); i != end(ia); ++i) {
+//        for (int *j = begin(*i); j != end(*i); ++j) {
+//            cout << *j << endl;
+//        }
+//    }
+    
+//    typedef int row[4];
+//    for (row *i = begin(ia); i != end(ia); ++i) {
+//        for (int *j = begin(*i); j != end(*i); ++j) {
+//            cout << *j << endl;
+//        }
+//    }
+    
+//    for (auto i = begin(ia); i != end(ia); ++i) {
+//        for (auto j = begin(*i); j != end(*i); ++j) {
+//            cout << *j << endl;
+//        }
+//    }
+     
     return 0;
+    
 }
