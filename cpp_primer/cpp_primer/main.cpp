@@ -20,6 +20,106 @@ extern int ix = 1024; // 定义
 int iy; // 定义
 extern int iz; // 声明
 
+int count() {
+    static int nums = 0;
+    ++nums;
+    return nums;
+}
+
+void swap(int *a, int *b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+bool hasUpperChar(const string &s) {
+    auto it = s.cbegin();
+    while (it != s.cend()) {
+        if (isupper(*it)) {
+            return true;
+        }
+        it++;
+    }
+    return false;
+}
+
+void toLowerChar(string &s) {
+    auto it = s.begin();
+    while (it != s.end()) {
+        *it = tolower(*it);
+        it++;
+    }
+}
+
+
+int sum(initializer_list<int> lst) {
+    int sum = 0;
+//    auto it = lst.begin();
+//    while (it != lst.end()) {
+//        sum += *it;
+//        ++it;
+//    }
+    for (auto &i : lst) {
+        sum += i;
+    }
+    return sum;
+}
+
+const string& manip() {
+    string ret;
+    if (!ret.empty()) {
+        return ret;  // 错误，返回局部变量引用
+    } else {
+        return "Empty"; // 错误，返回临时对象的引用
+    }
+}
+
+int (*arr(void))[3] {
+    int a[] = {1, 2, 3};
+    return &a;
+}
+
+auto arr1(void) -> int (*)[3] {
+    int a[] = {1, 2, 3};
+    return &a;
+}
+
+int odd[] = {1, 2, 3};
+decltype(odd) *arr3(void) {
+    int a[] = {1, 2, 3};
+    return &a;
+}
+
+// typydef
+typedef string arrStr[10];
+arrStr& func(void) {
+    string a[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+    return a;
+}
+
+// 箭头函数
+auto func1(void) -> string(&)[10] {
+    string a[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+    return a;
+}
+
+// decltype
+string arrStr2[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+decltype(arrStr2)& func3(void) {
+    string a[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+    return a;
+}
+
+// 直接写
+string (&func4(void))[10] {
+    string a[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+    return a;
+}
+
+bool constexpr isShorter(const string &s1, const string &s2) {
+    return s1.size() < s2.size();
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -357,7 +457,38 @@ int main(int argc, const char * argv[]) {
 //            cout << *j << endl;
 //        }
 //    }
-     
+    
+//    for (int i = 0; i < 10; ++i) {
+//        int a = count();
+//        cout << a << endl;
+//    }
+    
+//    int a = 10, b = 20;
+//    swap(&a, &b);
+//    cout << "a:" << a << "b:" << b << endl;
+    
+    
+    
+    
+//    string a = "adsdddfdf";
+//    if (hasUpperChar(a)) {
+//        cout << "含有大写字母" << endl;
+//    };
+//
+//    toLowerChar(a);
+//    cout << "a:" << a << endl;
+    
+    
+    int sum1 = sum({1, 2, 3});
+    int sum2 = sum({2, 4, 5, 8});
+    cout << "sum1:" << sum1 << ",sum2:" << sum2 << endl;
+    
+    bool res = isShorter("sds", "asfds");
+    
+    string a = "asdas";
+    string b = "asfd";
+    bool res2 = isShorter(a, b);
+    
     return 0;
     
 }
