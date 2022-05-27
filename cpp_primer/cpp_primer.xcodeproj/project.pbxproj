@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */; };
+		EF4E4A2F28411448003ACFB6 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4E4A2D28411448003ACFB6 /* Person.cpp */; };
 		EF965385283A17DF00051376 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF965384283A17DF00051376 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sales_data.cpp; sourceTree = "<group>"; };
+		EF4E4A2B2841048A003ACFB6 /* Sales_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sales_data.hpp; sourceTree = "<group>"; };
+		EF4E4A2D28411448003ACFB6 /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
+		EF4E4A2E28411448003ACFB6 /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
 		EF965381283A17DF00051376 /* cpp_primer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpp_primer; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF965384283A17DF00051376 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				EF965384283A17DF00051376 /* main.cpp */,
+				EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */,
+				EF4E4A2B2841048A003ACFB6 /* Sales_data.hpp */,
+				EF4E4A2D28411448003ACFB6 /* Person.cpp */,
+				EF4E4A2E28411448003ACFB6 /* Person.hpp */,
 			);
 			path = cpp_primer;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */,
+				EF4E4A2F28411448003ACFB6 /* Person.cpp in Sources */,
 				EF965385283A17DF00051376 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

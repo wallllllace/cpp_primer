@@ -9,6 +9,8 @@
 //#include <cctype>
 
 #include <vector>
+#include "Sales_data.hpp"
+#include "Person.hpp"
 
 using namespace std;
 
@@ -479,15 +481,49 @@ int main(int argc, const char * argv[]) {
 //    cout << "a:" << a << endl;
     
     
-    int sum1 = sum({1, 2, 3});
-    int sum2 = sum({2, 4, 5, 8});
-    cout << "sum1:" << sum1 << ",sum2:" << sum2 << endl;
+//    int sum1 = sum({1, 2, 3});
+//    int sum2 = sum({2, 4, 5, 8});
+//    cout << "sum1:" << sum1 << ",sum2:" << sum2 << endl;
+//
+//    bool res = isShorter("sds", "asfds");
+//
+//    string a = "asdas";
+//    string b = "asfd";
+//    bool res2 = isShorter(a, b);
     
-    bool res = isShorter("sds", "asfds");
+    /*
+     Sales_data a(cin);
+    print(cout, a) << endl;
+     Sales_data b("abc");
+    print(cout, b) << endl;
+    Sales_data c("abc",100, 99.9);
+    print(cout, c) << endl;
+     */
     
-    string a = "asdas";
-    string b = "asfd";
-    bool res2 = isShorter(a, b);
+//     print(cout, a) << endl;
+//     read(cin, b);
+//     print(cout, b) << endl;
+//     a.conbine(b);
+//     print(cout, a) << endl;
+     
+    
+//    Person p1, p2;
+//    while (read(cin, p)) {
+//        print(cout, p) << endl;
+//    }
+    
+//    if (read(read(cin, p1), p2)) {
+//        print(print(cout, p1), p2) << endl;
+//    }
+    
+    Person p1;
+    print(cout, p1) << endl;
+    Person p2("wang");
+    print(cout, p2) << endl;
+    Person p3("wang", "浦锦路598弄");
+    print(cout, p3) << endl;
+    Person p4(cin);
+    print(cout, p4) << endl;
     
     return 0;
     
