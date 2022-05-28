@@ -24,7 +24,7 @@ public:
     Person() = default;
     Person(const string& n): name(n){}
     Person(const string& n, const string& a): name(n), addr(a) {}
-    Person(istream &);
+    explicit Person(istream &);
     string myName() const { return name; }
     string myAddr() const { return addr; }
 };

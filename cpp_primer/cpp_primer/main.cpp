@@ -11,6 +11,8 @@
 #include <vector>
 #include "Sales_data.hpp"
 #include "Person.hpp"
+#include "Screen.hpp"
+#include "NoDefault.hpp"
 
 using namespace std;
 
@@ -516,15 +518,40 @@ int main(int argc, const char * argv[]) {
 //        print(print(cout, p1), p2) << endl;
 //    }
     
-    Person p1;
-    print(cout, p1) << endl;
-    Person p2("wang");
-    print(cout, p2) << endl;
-    Person p3("wang", "浦锦路598弄");
-    print(cout, p3) << endl;
-    Person p4(cin);
-    print(cout, p4) << endl;
+    /*
+     Person p1;
+     print(cout, p1) << endl;
+     Person p2("wang");
+     print(cout, p2) << endl;
+     Person p3("wang", "浦锦路598弄");
+     print(cout, p3) << endl;
+     Person p4(cin);
+     print(cout, p4) << endl;
+     */
     
+    /*
+     Screen s1(20, 30, 'a');
+     s1.move(1, 1).set(2, 2, 'c').display(cout).set('q');
+     cout << endl;
+     s1.display(cout);
+     s1.some_member();
+     
+     const Screen s2(10, 10, 'b');
+     s2.display(cout);
+     */
+    
+    Sales_data a;
+    const string str = "adasd";
+    a.conbine(str); // 类类型的隐式转换，调用只有一个参数的构造函数转化
+    a.conbine(string("dfsfd"));
+//    a.conbine("dfsfd"); // 只提供异步类型转化，这里有两步转换，"dfsfd" -> string -> Sales_data
+    a.conbine(Sales_data("dfsfd"));
+    print(cout, a) << endl;
+    
+//    vector<NoDefault> v(10);
+    
+    vector<int> v(10);
+    vector<int> v1({1, 2, 3});
     return 0;
     
 }

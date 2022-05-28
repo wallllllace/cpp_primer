@@ -23,9 +23,16 @@ class Sales_data {
     double revenue = 0.0; // 收入，内置类型要定义一个初始值，否则值是未定义的
     
 public:
-    Sales_data() = default;
-    Sales_data(const string& no): bookNo(no) { }
-    Sales_data(const string& no, unsigned u_sold, double p): bookNo(no), units_sold(u_sold), revenue(u_sold * p) {}
+//    Sales_data() = default;
+    Sales_data(const string& no, unsigned u_sold, double p): bookNo(no), units_sold(u_sold), revenue(u_sold * p) {
+        cout << "执行委托构造函数" << endl;
+    }
+//    explicit Sales_data(const string& no): Sales_data(no, 0, 0) { } // 委托构造函数， 前面加上 explicit 表示禁止隐式转换
+    Sales_data(const string& no): Sales_data(no, 0, 0) { } // 委托构造函数
+    Sales_data(): Sales_data("aaa", 10, 10) {
+        cout << "执行本身构造函数" << endl;
+    } // 委托构造函数
+    
     Sales_data(istream& is); // 此处仅是声明，在类外部定义
     inline string isbn() const {return bookNo;} // 定义在类内部的函数是隐式inline，不用写inline
     Sales_data& conbine(const Sales_data&);
