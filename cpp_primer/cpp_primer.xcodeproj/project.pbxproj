@@ -16,6 +16,8 @@
 		EFF4FF1C28427AD300FC537C /* NoDefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF1A28427AD300FC537C /* NoDefault.cpp */; };
 		EFF4FF1F28427B1800FC537C /* C.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF1D28427B1800FC537C /* C.cpp */; };
 		EFF4FF22284286EB00FC537C /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF20284286EB00FC537C /* Account.cpp */; };
+		EFF4FF252844985300FC537C /* StrBlob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF232844985300FC537C /* StrBlob.cpp */; };
+		EFF4FF2B284611F900FC537C /* StrBlobPtr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF2A284611F900FC537C /* StrBlobPtr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +51,10 @@
 		EFF4FF1E28427B1800FC537C /* C.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = C.hpp; sourceTree = "<group>"; };
 		EFF4FF20284286EB00FC537C /* Account.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
 		EFF4FF21284286EB00FC537C /* Account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Account.hpp; sourceTree = "<group>"; };
+		EFF4FF232844985300FC537C /* StrBlob.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StrBlob.cpp; sourceTree = "<group>"; };
+		EFF4FF242844985300FC537C /* StrBlob.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StrBlob.hpp; sourceTree = "<group>"; };
+		EFF4FF29284611F900FC537C /* StrBlobPtr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StrBlobPtr.hpp; sourceTree = "<group>"; };
+		EFF4FF2A284611F900FC537C /* StrBlobPtr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StrBlobPtr.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,10 @@
 				EFF4FF1E28427B1800FC537C /* C.hpp */,
 				EFF4FF20284286EB00FC537C /* Account.cpp */,
 				EFF4FF21284286EB00FC537C /* Account.hpp */,
+				EFF4FF232844985300FC537C /* StrBlob.cpp */,
+				EFF4FF242844985300FC537C /* StrBlob.hpp */,
+				EFF4FF2A284611F900FC537C /* StrBlobPtr.cpp */,
+				EFF4FF29284611F900FC537C /* StrBlobPtr.hpp */,
 			);
 			path = cpp_primer;
 			sourceTree = "<group>";
@@ -162,7 +172,9 @@
 				EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */,
 				EFF4FF1F28427B1800FC537C /* C.cpp in Sources */,
 				EFF4FF16284257BF00FC537C /* Window_mgr.cpp in Sources */,
+				EFF4FF2B284611F900FC537C /* StrBlobPtr.cpp in Sources */,
 				EF4E4A2F28411448003ACFB6 /* Person.cpp in Sources */,
+				EFF4FF252844985300FC537C /* StrBlob.cpp in Sources */,
 				EFF4FF22284286EB00FC537C /* Account.cpp in Sources */,
 				EFF4FF1C28427AD300FC537C /* NoDefault.cpp in Sources */,
 				EF965385283A17DF00051376 /* main.cpp in Sources */,

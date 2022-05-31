@@ -13,6 +13,9 @@
 #include "Person.hpp"
 #include "Screen.hpp"
 #include "NoDefault.hpp"
+#include <memory>
+#include "StrBlob.hpp"
+#include "StrBlobPtr.hpp"
 
 using namespace std;
 
@@ -123,6 +126,47 @@ string (&func4(void))[10] {
 bool constexpr isShorter(const string &s1, const string &s2) {
     return s1.size() < s2.size();
 }
+
+/*
+ vector<int> *getV(){
+     return new vector<int>();
+ }
+
+ void read(istream& is, vector<int> * v) {
+     int a;
+     while (is >> a) {
+         v->push_back(a);
+     }
+ }
+
+
+ void print(ostream& os, vector<int> *v) {
+     for (auto& i : *v) {
+         os << i << " ";
+     }
+     os << endl;
+     delete v;
+ }
+ */
+
+shared_ptr<vector<int>> getV() {
+    return make_shared<vector<int>>();
+}
+
+void read(istream& is, shared_ptr<vector<int>> v) {
+    int a;
+    while (is >> a) {
+        v->push_back(a);
+    }
+}
+
+void print(ostream& os, shared_ptr<vector<int>> v) {
+    for (auto& i : *v) {
+        os << i << " ";
+    }
+    os << endl;
+}
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -540,18 +584,89 @@ int main(int argc, const char * argv[]) {
      s2.display(cout);
      */
     
-    Sales_data a;
-    const string str = "adasd";
-    a.conbine(str); // 类类型的隐式转换，调用只有一个参数的构造函数转化
-    a.conbine(string("dfsfd"));
-//    a.conbine("dfsfd"); // 只提供异步类型转化，这里有两步转换，"dfsfd" -> string -> Sales_data
-    a.conbine(Sales_data("dfsfd"));
-    print(cout, a) << endl;
+    /*
+     Sales_data a;
+     const string str = "adasd";
+     a.conbine(str); // 类类型的隐式转换，调用只有一个参数的构造函数转化
+     a.conbine(string("dfsfd"));
+ //    a.conbine("dfsfd"); // 只提供异步类型转化，这里有两步转换，"dfsfd" -> string -> Sales_data
+     a.conbine(Sales_data("dfsfd"));
+     print(cout, a) << endl;
+     
+ //    vector<NoDefault> v(10);
+     
+     vector<int> v(10);
+     vector<int> v1({1, 2, 3});
+     */
     
-//    vector<NoDefault> v(10);
+    /*
+     string s;
+     shared_ptr<string> p2 = make_shared<string>("");
+     shared_ptr<string> p1(p2);
+     if (p1 && p1->empty()) {
+         *p1 = "string";
+     }
+     p1.get();
+     cout << *p1 << endl;
+     */
     
-    vector<int> v(10);
-    vector<int> v1({1, 2, 3});
+    
+    /*
+     StrBlob sb1 = StrBlob({"wang", "li", "zhao"});
+     sb1.look(cout)  << endl;
+     StrBlob sb2 = sb1;
+     sb1.pop_back();
+     sb2.look(cout)  << endl;
+     */
+    
+    
+    /*
+     vector<int> *p1 = new vector<int>({1,2,3});
+     vector<int> *p2 = new vector<int>{1,2,3};
+     vector<int> *p3 = new vector<int>();
+     const vector<int> *p4 = new const vector<int>(); // 动态分配const对象
+     delete p1;
+     delete p2;
+     delete p3;
+     delete p4; // 虽然const对象的值不能被改变，但是可以被销毁的
+     p1 = nullptr; // 释放对象之后，把指针置为空
+     p2 = nullptr;
+     p3 = nullptr;
+     p4 = nullptr;
+     */
+    
+    /*
+     vector<int> *v = getV();
+     read(cin, v);
+     print(cout, v);
+     */
+    
+    
+    /*
+     auto v = getV();
+     read(cin, v);
+     print(cout, v);
+     */
+    
+//    unique_ptr<int> p1;
+//    unique_ptr<int> p2(new int(10));
+//    p1 = p2;
+//    unique_ptr<int> p3(p2);
+//    p1.reset(p2.release());
+//    p2.reset(new int(10));
+    
+    string a;
+    StrBlob sb;
+    while (cin >> a) {
+        sb.push_back(a);
+    }
+    
+    StrBlobPtr p = sb.begin();
+    while (!p.isEnd()) {
+        cout << p.deref() << " ";
+        p.incr();
+    }
+    cout << endl;
     return 0;
     
 }
