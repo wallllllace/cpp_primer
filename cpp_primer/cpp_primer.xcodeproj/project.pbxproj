@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */; };
 		EF4E4A2F28411448003ACFB6 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4E4A2D28411448003ACFB6 /* Person.cpp */; };
+		EF89C4DD2848B74E003B553B /* TextQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF89C4DB2848B74E003B553B /* TextQuery.cpp */; };
+		EF89C4E02848B89C003B553B /* QueryResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF89C4DE2848B89C003B553B /* QueryResult.cpp */; };
 		EF965385283A17DF00051376 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF965384283A17DF00051376 /* main.cpp */; };
 		EFF4FF132842525C00FC537C /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF112842525C00FC537C /* Screen.cpp */; };
 		EFF4FF16284257BF00FC537C /* Window_mgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFF4FF14284257BF00FC537C /* Window_mgr.cpp */; };
@@ -37,6 +39,10 @@
 		EF4E4A2B2841048A003ACFB6 /* Sales_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sales_data.hpp; sourceTree = "<group>"; };
 		EF4E4A2D28411448003ACFB6 /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
 		EF4E4A2E28411448003ACFB6 /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
+		EF89C4DB2848B74E003B553B /* TextQuery.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextQuery.cpp; sourceTree = "<group>"; };
+		EF89C4DC2848B74E003B553B /* TextQuery.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextQuery.hpp; sourceTree = "<group>"; };
+		EF89C4DE2848B89C003B553B /* QueryResult.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QueryResult.cpp; sourceTree = "<group>"; };
+		EF89C4DF2848B89C003B553B /* QueryResult.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QueryResult.hpp; sourceTree = "<group>"; };
 		EF965381283A17DF00051376 /* cpp_primer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpp_primer; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF965384283A17DF00051376 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EFF4FF112842525C00FC537C /* Screen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
@@ -108,6 +114,10 @@
 				EFF4FF242844985300FC537C /* StrBlob.hpp */,
 				EFF4FF2A284611F900FC537C /* StrBlobPtr.cpp */,
 				EFF4FF29284611F900FC537C /* StrBlobPtr.hpp */,
+				EF89C4DB2848B74E003B553B /* TextQuery.cpp */,
+				EF89C4DC2848B74E003B553B /* TextQuery.hpp */,
+				EF89C4DE2848B89C003B553B /* QueryResult.cpp */,
+				EF89C4DF2848B89C003B553B /* QueryResult.hpp */,
 			);
 			path = cpp_primer;
 			sourceTree = "<group>";
@@ -170,12 +180,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */,
+				EF89C4DD2848B74E003B553B /* TextQuery.cpp in Sources */,
 				EFF4FF1F28427B1800FC537C /* C.cpp in Sources */,
 				EFF4FF16284257BF00FC537C /* Window_mgr.cpp in Sources */,
 				EFF4FF2B284611F900FC537C /* StrBlobPtr.cpp in Sources */,
 				EF4E4A2F28411448003ACFB6 /* Person.cpp in Sources */,
 				EFF4FF252844985300FC537C /* StrBlob.cpp in Sources */,
 				EFF4FF22284286EB00FC537C /* Account.cpp in Sources */,
+				EF89C4E02848B89C003B553B /* QueryResult.cpp in Sources */,
 				EFF4FF1C28427AD300FC537C /* NoDefault.cpp in Sources */,
 				EF965385283A17DF00051376 /* main.cpp in Sources */,
 				EFF4FF132842525C00FC537C /* Screen.cpp in Sources */,

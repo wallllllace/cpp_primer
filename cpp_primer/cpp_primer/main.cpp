@@ -16,6 +16,8 @@
 #include <memory>
 #include "StrBlob.hpp"
 #include "StrBlobPtr.hpp"
+#include "TextQuery.hpp"
+#include "QueryResult.hpp"
 
 using namespace std;
 
@@ -681,21 +683,27 @@ int main(int argc, const char * argv[]) {
      cout << endl;
      */
     
-    vector<string> v{"wang","zhao","li"};
-    allocator<string> alloc;
-    auto p = alloc.allocate(10);
-    auto q = uninitialized_copy(v.cbegin(), v.cend(), p);
-    uninitialized_fill_n(q, 7, "aaa");
     
-    auto p1 = p;
-    for (int i = 0; i < 10; ++i) {
-        cout << *p1 << " ";
-        p1++;
-    }
-    cout << endl;
+    /*
+     vector<string> v{"wang","zhao","li"};
+     allocator<string> alloc;
+     auto p = alloc.allocate(10);
+     auto q = uninitialized_copy(v.cbegin(), v.cend(), p);
+     uninitialized_fill_n(q, 7, "aaa");
+     
+     auto p1 = p;
+     for (int i = 0; i < 10; ++i) {
+         cout << *p1 << " ";
+         p1++;
+     }
+     cout << endl;
+     
+ //    pinjie("hello", "world");
+     */
     
-//    pinjie("hello", "world");
-    
+    vector<string> v{"hello my home", "hi hello", "hello there !", "my student, hi", "go home"};
+    TextQuery tq(v);
+    tq.query("home").print(cout);
     return 0;
     
 }
