@@ -127,6 +127,8 @@ bool constexpr isShorter(const string &s1, const string &s2) {
     return s1.size() < s2.size();
 }
 
+
+
 /*
  vector<int> *getV(){
      return new vector<int>();
@@ -167,6 +169,15 @@ void print(ostream& os, shared_ptr<vector<int>> v) {
     os << endl;
 }
 
+
+void pinjie(const string& s1, const string& s2) {
+    string s = s1 + s2;
+    unique_ptr<char[]> up(new char[s.size()]);
+    for (int i = 0; i < s.size(); ++i) {
+        up[i] = s[i];
+    }
+//    up.release(); // 不需要手动释放，up离开函数作用域会调用up的析构函数，在析构函数中会调用delete[] 函数
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -655,18 +666,36 @@ int main(int argc, const char * argv[]) {
 //    p1.reset(p2.release());
 //    p2.reset(new int(10));
     
-    string a;
-    StrBlob sb;
-    while (cin >> a) {
-        sb.push_back(a);
-    }
+    /*
+     string a;
+     StrBlob sb;
+     while (cin >> a) {
+         sb.push_back(a);
+     }
+     
+     StrBlobPtr p = sb.begin();
+     while (!p.isEnd()) {
+         cout << p.deref() << " ";
+         p.incr();
+     }
+     cout << endl;
+     */
     
-    StrBlobPtr p = sb.begin();
-    while (!p.isEnd()) {
-        cout << p.deref() << " ";
-        p.incr();
+    vector<string> v{"wang","zhao","li"};
+    allocator<string> alloc;
+    auto p = alloc.allocate(10);
+    auto q = uninitialized_copy(v.cbegin(), v.cend(), p);
+    uninitialized_fill_n(q, 7, "aaa");
+    
+    auto p1 = p;
+    for (int i = 0; i < 10; ++i) {
+        cout << *p1 << " ";
+        p1++;
     }
     cout << endl;
+    
+//    pinjie("hello", "world");
+    
     return 0;
     
 }
