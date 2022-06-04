@@ -18,6 +18,11 @@
 #include "StrBlobPtr.hpp"
 #include "TextQuery.hpp"
 #include "QueryResult.hpp"
+#include "X.hpp"
+#include "Employee.hpp"
+#include "HasPtr.hpp"
+#include "Message.hpp"
+#include "Folder.hpp"
 
 using namespace std;
 
@@ -179,6 +184,14 @@ void pinjie(const string& s1, const string& s2) {
         up[i] = s[i];
     }
 //    up.release(); // 不需要手动释放，up离开函数作用域会调用up的析构函数，在析构函数中会调用delete[] 函数
+}
+
+void funcX(const X) {
+    cout << "funcX" << endl;
+}
+
+void funcX1(const X&) {
+    cout << "funcX1" << endl;
 }
 
 int main(int argc, const char * argv[]) {
@@ -701,9 +714,67 @@ int main(int argc, const char * argv[]) {
  //    pinjie("hello", "world");
      */
     
-    vector<string> v{"hello my home", "hi hello", "hello there !", "my student, hi", "go home"};
-    TextQuery tq(v);
-    tq.query("home").print(cout);
+    /*
+     vector<string> v{"hello my home", "hi hello", "hello there !", "my student, hi", "go home"};
+     TextQuery tq(v);
+     tq.query("home").print(cout);
+     */
+    
+    /*
+     void funcX(const X) {
+         cout << "funcX" << endl;
+     }
+
+     void funcX1(const X&) {
+         cout << "funcX1" << endl;
+     }
+     */
+    
+    
+    /*
+     cout << "创建x" << endl;
+     X x;
+     cout << "开始调用funcX" << endl;
+     funcX(x);
+     cout << "开始调用funcX1" << endl;
+     funcX1(x);
+     cout << "创建vector" << endl;
+     vector<X> vx;
+     cout << "vector添加x" << endl;
+     vx.push_back(x);
+     cout << "x赋值初始化给x1" << endl;
+     X x1 = x;
+     cout << "结束测试" << endl;
+     */
+    
+    
+//    Employee e;
+//    Employee e1 = e;
+//    Employee e2(e);
+    
+    /*
+     string s = "abc";
+     cout << &s << endl;
+     HasPtr1 s1(s);
+ //    cout << &s << endl;
+ //    s1.print();
+     */
+
+    /*
+     HasPtr hp("abc");
+     HasPtr hp1("123");
+     hp = hp1;
+     */
+    
+    
+    Folder f1;
+    Folder f2;
+    Message m("hi, morning!");
+    m.save(f1);
+    m.save(f2);
+    
+    
+    
     return 0;
     
 }
