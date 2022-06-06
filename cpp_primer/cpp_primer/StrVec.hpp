@@ -19,9 +19,12 @@ class StrVec {
 public:
     StrVec():elements(nullptr), first_free(nullptr), cap(nullptr){ }
     StrVec(const StrVec&);
+    StrVec(StrVec&&) noexcept; // 移动构造函数（右值引用）
     ~StrVec();
     StrVec& operator=(const StrVec&);
+    StrVec& operator=(StrVec&&) noexcept;
     void push_back(const string&);
+    void push_back(string&&); // 形参时右值引用
     size_t size() const { return first_free - elements ;}
     size_t capacity() const { return cap - elements;}
     string* begin() const {return elements;}
