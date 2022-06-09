@@ -23,9 +23,13 @@
 #include "HasPtr.hpp"
 #include "Message.hpp"
 #include "Folder.hpp"
+//#include "json11.hpp"
+#include "json22.hpp"
+#include <string>
 
 using namespace std;
-
+//using namespace json11;
+using namespace json22;
 
 //string global_str;
 //int global_int;
@@ -766,14 +770,31 @@ int main(int argc, const char * argv[]) {
      hp = hp1;
      */
     
-    
-    Folder f1;
-    Folder f2;
-    Message m("hi, morning!");
-    m.save(f1);
-    m.save(f2);
-    
-    
+    /*
+     Folder f1;
+     Folder f2;
+     Message m("hi, morning!");
+     m.save(f1);
+     m.save(f2);
+     */
+    string s = "10";
+    string o_key3 = "true";
+//    Json::Object o{{"o_key1", "5"}};
+//    Json my_json = json22::Json(o);
+    Json my_json = Json({
+        { "key1", s },
+        { "key2", true },
+        { "key3", Json::Array{1 ,2 ,3} },
+        { "key4", 4 },
+        { "key5", Json::Object{{"o_key1", 5},{ "o_key2", true },{ "o_key3", o_key3 }}}
+    });
+//    Json my_json = Json::object {
+//        { "key1", "value1" },
+//        { "key2", false },
+//        { "key3", Json::array { 1, 2, 3 } },
+//    };
+    std::string json_str = my_json.dump();
+    cout << json_str << endl;
     
     return 0;
     

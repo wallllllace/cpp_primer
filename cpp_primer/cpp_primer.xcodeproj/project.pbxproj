@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF27F6F0284DF78E0081CE51 /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF27F6EF284DF78D0081CE51 /* json11.cpp */; };
+		EF27F6F3284E082A0081CE51 /* json22.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF27F6F1284E082A0081CE51 /* json22.cpp */; };
 		EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */; };
 		EF4E4A2F28411448003ACFB6 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4E4A2D28411448003ACFB6 /* Person.cpp */; };
 		EF89C4DD2848B74E003B553B /* TextQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF89C4DB2848B74E003B553B /* TextQuery.cpp */; };
@@ -42,6 +44,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF27F6EE284DF78D0081CE51 /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hpp; sourceTree = "<group>"; };
+		EF27F6EF284DF78D0081CE51 /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cpp; sourceTree = "<group>"; };
+		EF27F6F1284E082A0081CE51 /* json22.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = json22.cpp; sourceTree = "<group>"; };
+		EF27F6F2284E082A0081CE51 /* json22.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json22.hpp; sourceTree = "<group>"; };
 		EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sales_data.cpp; sourceTree = "<group>"; };
 		EF4E4A2B2841048A003ACFB6 /* Sales_data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sales_data.hpp; sourceTree = "<group>"; };
 		EF4E4A2D28411448003ACFB6 /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 		EF965383283A17DF00051376 /* cpp_primer */ = {
 			isa = PBXGroup;
 			children = (
+				EF27F6EF284DF78D0081CE51 /* json11.cpp */,
+				EF27F6EE284DF78D0081CE51 /* json11.hpp */,
 				EF965384283A17DF00051376 /* main.cpp */,
 				EF4E4A2A2841048A003ACFB6 /* Sales_data.cpp */,
 				EF4E4A2B2841048A003ACFB6 /* Sales_data.hpp */,
@@ -153,6 +161,8 @@
 				EF89C4F1284B4D3B003B553B /* Folder.hpp */,
 				EFC8EE3A284B675100BA4312 /* StrVec.cpp */,
 				EFC8EE3B284B675100BA4312 /* StrVec.hpp */,
+				EF27F6F1284E082A0081CE51 /* json22.cpp */,
+				EF27F6F2284E082A0081CE51 /* json22.hpp */,
 			);
 			path = cpp_primer;
 			sourceTree = "<group>";
@@ -217,6 +227,7 @@
 				EF89C4E32849E953003B553B /* X.cpp in Sources */,
 				EF4E4A2C2841048A003ACFB6 /* Sales_data.cpp in Sources */,
 				EFC8EE3C284B675100BA4312 /* StrVec.cpp in Sources */,
+				EF27F6F0284DF78E0081CE51 /* json11.cpp in Sources */,
 				EF89C4DD2848B74E003B553B /* TextQuery.cpp in Sources */,
 				EFF4FF1F28427B1800FC537C /* C.cpp in Sources */,
 				EFF4FF16284257BF00FC537C /* Window_mgr.cpp in Sources */,
@@ -234,6 +245,7 @@
 				EFF4FF132842525C00FC537C /* Screen.cpp in Sources */,
 				EFF4FF192842758500FC537C /* ConstRef.cpp in Sources */,
 				EF89C4EF284B3DFA003B553B /* Message.cpp in Sources */,
+				EF27F6F3284E082A0081CE51 /* json22.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
